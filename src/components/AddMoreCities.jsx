@@ -2,11 +2,10 @@ import { useWeatherDetails } from "../WeatherContext";
 import styles from "../styles/AddMoreCities.module.css";
 import { useGeolocation } from "../hooks/useGeolocation";
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
 
 function AddMoreCities() {
   const { weatherDetails, dispatch } = useWeatherDetails();
-  console.log("WEATHER", weatherDetails);
+  // console.log("WEATHER", weatherDetails);
   const [city, setCity] = useState("");
 
   const {

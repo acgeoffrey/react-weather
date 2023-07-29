@@ -5,7 +5,7 @@ import ForecastChart from "./ForecastChart";
 
 function Forecast({ data }) {
   const [activeProperty, setActiveProperty] = useState("temp");
-  console.log("FORECAST COMPONENT LOADED");
+  // console.log("FORECAST COMPONENT LOADED");
   let chartData;
   if (activeProperty === "temp" || activeProperty === "humidity")
     chartData = data.tempArr;

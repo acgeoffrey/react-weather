@@ -10,8 +10,7 @@ function Home() {
     (data) => data.daily.id === currentCity
   );
   const { daily, weekly } = filteredWeatherData[0];
-  const { name, main, weather, wind } = daily;
-  console.log("Hello: ", weatherDetails);
+  const { main, wind } = daily;
 
   let chart = {
     tempArr: [],
@@ -39,7 +38,6 @@ function Home() {
           .substring(0, 5),
       });
     }
-    console.log(chart);
   }
 
   temperature(weekly.list);

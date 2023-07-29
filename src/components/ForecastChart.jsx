@@ -2,7 +2,7 @@ import { XAxis, LabelList, AreaChart, Area } from "recharts";
 import styles from "../styles/Forecast.module.css";
 
 function ForecastChart({ data, dataKey }) {
-  console.log(data, dataKey);
+  // console.log(data, dataKey);
   return (
     <div className={styles.areaChartContainer}>
       <AreaChart

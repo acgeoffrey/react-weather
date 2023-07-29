@@ -7,8 +7,8 @@ import AddMoreCities from "./AddMoreCities";
 function App() {
   const { status, isLoading, addCityNav } = useWeatherDetails();
 
-  console.log("STATUS: ", status);
-  console.log("addCityNav: ", addCityNav);
+  // console.log("STATUS: ", status);
+  // console.log("addCityNav: ", addCityNav);
 
   if (isLoading) return <Loader />;
   if (addCityNav) return <AddMoreCities />;

@@ -2,7 +2,7 @@ let weatherDetails = localStorage.getItem("cities")
   ? JSON.parse(localStorage.getItem("cities"))
   : [];
 
-console.log(weatherDetails);
+// console.log(weatherDetails);
 
 let currentCityLS = JSON.parse(localStorage.getItem("currentCity"));
 let addCityNav = false;
@@ -25,7 +25,7 @@ const initialState = {
 };
 
 function reducer(state, action) {
-  console.log(action.type);
+  // console.log(action.type);
   switch (action.type) {
     case "addCity":
       return { ...state, addCityNav: false, city: action.payload };

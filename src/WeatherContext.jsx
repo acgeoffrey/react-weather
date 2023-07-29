@@ -30,7 +30,7 @@ function WeatherProvider({ children }) {
       const controller = new AbortController();
       async function fetchWeather() {
         try {
-          console.log("FETCHING WEATHER");
+          // console.log("FETCHING WEATHER");
           dispatch({ type: "setLoading" });
 
           let daily, weekly;
@@ -75,7 +75,7 @@ function WeatherProvider({ children }) {
       }
 
       if (city.length > 2 || position.lat) {
-        console.log("fetch function initiated");
+        // console.log("fetch function initiated");
         fetchWeather();
       }
 
