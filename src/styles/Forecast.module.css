@@ -5,14 +5,13 @@
 
 .forecastContainer h2 {
   font-size: 2rem;
-  margin-bottom: 0.2rem;
 }
 
 .forecastContainer p {
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   color: grey;
   padding-left: 0.75rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .areaChartContainer {
