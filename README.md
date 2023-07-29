@@ -1,8 +1,24 @@
 # React Weather Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live URL](https://acgeoffrey.github.io/react-weather/)
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Mobile first design React weather application fetches weather data from OpenWeatherMap API.
+- Displays daily weather and 3-day forecast for next 48 hours.
+- Add places by manually entering cities or automatically by GPS.
+- Weather Data is stored in LocalStorage.
+
+## Run
+
+- Install the dependencies required by running npm install.
+- Start the server by running npm run dev.
+- Server should run on http://localhost:5173/
+
+### Built with
+
+- React
+
+## Author
+
+- Geoffrey
