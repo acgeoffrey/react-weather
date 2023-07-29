@@ -23,7 +23,7 @@ function Forecast({ data }) {
 
   return (
     <div className={styles.forecastContainer}>
-      <h2>3-Hr Weather</h2>
+      <h2>3 Hour Weather</h2>
       <p>48-Hour forecast</p>
       <DetailButton
         icon={<i className="fa-solid fa-temperature-three-quarters"></i>}

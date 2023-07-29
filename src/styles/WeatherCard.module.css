@@ -8,7 +8,8 @@
 
 .mainTemp {
   display: inline;
-  font-size: 5rem;
+  font-size: 5.5rem;
+  font-weight: 600;
 }
 
 .cityWeather h4 {
