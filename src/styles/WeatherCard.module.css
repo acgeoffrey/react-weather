@@ -1,6 +1,6 @@
 .cardContainer {
   padding: 2.5rem;
-  height: 30%;
+  height: 35%;
   background-size: cover;
   color: white;
   position: relative;
@@ -23,11 +23,23 @@
   padding: 1rem;
 }
 
-.navIcon {
+.navDiv {
+  margin: 2.5rem;
   position: absolute;
   top: 0;
   right: 0;
-  margin: 2.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navDiv button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+.navDiv i {
+  color: white;
   font-size: 2rem;
   cursor: pointer;
 }

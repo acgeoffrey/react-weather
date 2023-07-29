@@ -9,21 +9,40 @@ function WeatherCard() {
   const { daily } = filteredWeatherData[0];
   const { name, main, weather } = daily;
   const lastUpdated = new Date(daily.dt * 1000).toLocaleTimeString();
-  const day = lastUpdated.substring(9, 11);
+  let day;
+  const time24format = Number(
+    new Date()
+      .toLocaleTimeString("en-GB", {
+        hour12: false,
+      })
+      .substring(0, 2)
+  );
+  // console.log(time24format);
+  if (time24format <= 6 || time24format >= 18) {
+    // console.log("dark");
+    day = "dark";
+  } else {
+    // console.log("day");
+    day = "day";
+  }
+
   let weatherMain;
 
   switch (weather[0].main.toLowerCase()) {
     case "clouds":
-      weatherMain = day == "AM" ? "cloudy" : "cloudy-dark";
+      weatherMain = day == "day" ? "cloudy" : "cloudy-dark";
       break;
     case "rain":
-      weatherMain = day == "AM" ? "rain" : "rain-dark";
+      weatherMain = day == "day" ? "rain" : "rain-dark";
       break;
     case "clear":
-      weatherMain = day == "AM" ? "clear" : "clear-dark";
+      weatherMain = day == "day" ? "clear" : "clear-dark";
+      break;
+    case "haze":
+      weatherMain = day == "day" ? "haze" : "haze-dark";
       break;
     default:
-      weatherMain = day == "AM" ? "sunny" : "night";
+      weatherMain = day == "day" ? "sunny" : "night";
   }
 
   return (
@@ -42,15 +61,17 @@ function WeatherCard() {
       <p className={styles.lastUpdated}>
         Last updated: <span>{lastUpdated}</span>
       </p>
-      <div
-        className={styles.navIcon}
-        onClick={() => dispatch({ type: "addMoreCity" })}
-      >
-        <i className="fa-solid fa-bars"></i>
+      <div className={styles.navDiv}>
+        <button onClick={() => dispatch({ type: "refresh/true" })}>
+          <i className="fa-solid fa-rotate-right"></i>
+        </button>
+        <div
+          className={styles.navIcon}
+          onClick={() => dispatch({ type: "addMoreCity" })}
+        >
+          <i className="fa-solid fa-bars"></i>
+        </div>
       </div>
-      <button onClick={() => dispatch({ type: "refresh/true" })}>
-        refresh
-      </button>
     </div>
   );
 }

@@ -30,7 +30,7 @@ function ForecastChart({ data, dataKey }) {
           stroke="#e23e57"
           strokeWidth={3}
           activeDot={false}
-          dot={false}
+          dot={true}
           fill="url(#colorArea)"
         >
           <LabelList
