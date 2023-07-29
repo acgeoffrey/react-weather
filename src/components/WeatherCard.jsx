@@ -30,7 +30,7 @@ function WeatherCard() {
     <div
       className={styles.cardContainer}
       style={{
-        backgroundImage: `url(${`../../images/${weatherMain}.jpg`})`,
+        backgroundImage: `url(${`./images/${weatherMain}.jpg`})`,
       }}
     >
       <h2 className={styles.mainTemp}>

@@ -24,7 +24,7 @@ function CitySelect() {
   return (
     <div className={styles.selectContainer}>
       <div className={styles.gpsContainer}>
-        <img src="./../../my_location.svg" alt="set-location" />
+        <img src="./my_location.svg" alt="set-location" />
         <p>Set Location</p>
         <span>Choose how to set your location for the weather forecast</span>
         <button className="btn btn-gps" onClick={getPosition}>
