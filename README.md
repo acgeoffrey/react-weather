@@ -9,7 +9,7 @@
 - Add places by manually entering cities or automatically by GPS.
 - Weather Data is stored in LocalStorage.
 
-## Run
+### Run
 
 - Install the dependencies required by running npm install.
 - Start the server by running npm run dev.
@@ -18,7 +18,8 @@
 ### Built with
 
 - React
+  - Used Context API and useReducer hook to store and manage state on a global level.
 
-## Author
+### Author
 
 - Geoffrey
