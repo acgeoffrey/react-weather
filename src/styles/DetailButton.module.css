@@ -1,0 +1,34 @@
+.foreButtonContainer {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+
+  display: inline-block;
+
+  border: 1px solid grey;
+  color: grey;
+  border-radius: 50%;
+
+  font-size: 1.4rem;
+}
+
+.buttonData {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* .buttonIcon {
+  display: flex;
+  align-items: center;
+} */
+
+.active {
+  border-radius: 2rem;
+  width: inherit;
+  background-color: #e23e575c;
+  color: #e23e57;
+  border-color: #e23e57;
+  transition: color 0.7s ease-in-out;
+}

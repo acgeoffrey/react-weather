@@ -1,0 +1,118 @@
+:root {
+  --color-darkest: #343a40;
+  --color-dark: #495057;
+  --color-medium: #ced4da;
+  --color-light: #f1f3f5;
+
+  --color-accent: #e23e57;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Jost", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-darkest);
+  background-color: white;
+}
+
+.btn {
+  width: 25rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-family: inherit;
+}
+
+.btn-gps {
+  background-color: #e23e57;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--color-light);
+}
+
+input {
+  width: 25rem;
+  height: 3.5rem;
+  border-radius: 2rem;
+  border: 1px solid #d3d3d3;
+  font-family: inherit;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.btn-city-submit {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  margin-left: 1rem;
+}
+
+.btn-city-submit i {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* Loader */
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 1.6rem;
+
+  color: var(--color-darkest);
+  font-size: 1.8rem;
+}
+
+.loader {
+  justify-self: center;
+  width: 50px;
+  height: 24px;
+  background: radial-gradient(circle closest-side, currentColor 90%, #0000) 0%
+      50%,
+    radial-gradient(circle closest-side, currentColor 90%, #0000) 50% 50%,
+    radial-gradient(circle closest-side, currentColor 90%, #0000) 100% 50%;
+  background-size: calc(100% / 3) 12px;
+  background-repeat: no-repeat;
+  animation: loader 1s infinite linear;
+}
+
+@keyframes loader {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
