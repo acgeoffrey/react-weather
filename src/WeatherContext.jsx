@@ -81,9 +81,9 @@ function WeatherProvider({ children }) {
         toast.promise(
           fetchWeather(),
           {
-            loading: "Refreshing...",
+            loading: "Fetching Weather Data...",
             success: "Done",
-            error: "Error when refreshing",
+            error: "Error Fetching Data",
           },
           { position: "bottom-center" }
         );
@@ -123,13 +123,14 @@ function WeatherProvider({ children }) {
         });
       }
 
+      console.log(refresh);
       if (refresh) {
         toast.promise(
           refreshFunction(),
           {
             loading: "Refreshing...",
             success: "Done",
-            error: "Error when refreshing",
+            error: "Error refreshing",
           },
           { position: "bottom-center" }
         );

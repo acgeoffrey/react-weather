@@ -10,7 +10,7 @@ function App() {
   // console.log("STATUS: ", status);
   // console.log("addCityNav: ", addCityNav);
 
-  if (isLoading) return <Loader />;
+  // if (isLoading) return <Loader />;
   if (addCityNav) return <AddMoreCities />;
   else if (status === "cityNotLoaded") return <CitySelect />;
   else if (status === "ready") return <Home />;
