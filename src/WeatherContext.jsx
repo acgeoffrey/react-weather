@@ -19,7 +19,6 @@ function WeatherProvider({ children }) {
   ] = useReducer(reducer, initialState);
 
   const KEY = import.meta.env.VITE_REACT_KEY;
-  console.log(import.meta.env);
 
   const CITY_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${KEY}&units=metric`;
   const POS_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.lat}&lon=${position.lng}&appid=${KEY}&units=metric`;
