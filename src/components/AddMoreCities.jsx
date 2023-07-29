@@ -37,14 +37,6 @@ function AddMoreCities() {
         <h2>Add Cities</h2>
       </div>
 
-      <button className={styles.btnAddMore} onClick={getPosition}>
-        <i
-          className="fa-solid fa-location-dot"
-          style={{ marginRight: "1rem" }}
-        ></i>{" "}
-        My Location
-      </button>
-
       <form onSubmit={handleSubmit}>
         <div className={styles.formContainer}>
           <input
@@ -57,6 +49,14 @@ function AddMoreCities() {
           </button>
         </div>
       </form>
+
+      <button className={styles.btnAddMore} onClick={getPosition}>
+        <i
+          className="fa-solid fa-location-dot"
+          style={{ marginRight: "1rem" }}
+        ></i>{" "}
+        My Location
+      </button>
 
       <div className={styles.savedLocationsContainer}>
         <h3>SAVED LOCATIONS</h3>

@@ -32,6 +32,12 @@ body {
   min-height: 100vh;
   color: var(--color-darkest);
   background-color: white;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 .btn {
