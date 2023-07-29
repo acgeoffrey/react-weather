@@ -15,6 +15,7 @@
 }
 
 .areaChartContainer {
+  margin-top: 1.5rem;
   overflow-x: scroll;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
@@ -22,4 +23,15 @@
 
 .areaChartContainer::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
+}
+
+.unit {
+  display: inline-block;
+  padding: 0 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.095);
+  border: 1px solid grey;
+  border-radius: 1.5rem;
+  margin-left: 1.25rem;
 }

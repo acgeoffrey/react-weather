@@ -33,9 +33,7 @@ function WeatherCard() {
         backgroundImage: `url(${`./images/${weatherMain}.jpg`})`,
       }}
     >
-      <h2 className={styles.mainTemp}>
-        {Math.ceil(main.temp)}&deg; <span>C</span>
-      </h2>
+      <h2 className={styles.mainTemp}>{Math.ceil(main.temp)}&deg;</h2>
       <div className={styles.cityWeather}>
         <h4>{name}</h4>
         <h4>{weather[0].main}</h4>
@@ -50,6 +48,9 @@ function WeatherCard() {
       >
         <i className="fa-solid fa-bars"></i>
       </div>
+      <button onClick={() => dispatch({ type: "refresh/true" })}>
+        refresh
+      </button>
     </div>
   );
 }

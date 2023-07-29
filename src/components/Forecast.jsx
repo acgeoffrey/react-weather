@@ -6,10 +6,20 @@ import ForecastChart from "./ForecastChart";
 function Forecast({ data }) {
   const [activeProperty, setActiveProperty] = useState("temp");
   // console.log("FORECAST COMPONENT LOADED");
-  let chartData;
-  if (activeProperty === "temp" || activeProperty === "humidity")
+  let chartData, unit;
+  if (activeProperty === "temp") {
     chartData = data.tempArr;
-  if (activeProperty === "speed") chartData = data.windArr;
+    // unit = "°c";
+    unit = "deg";
+  }
+  if (activeProperty === "speed") {
+    chartData = data.windArr;
+    unit = "km/h";
+  }
+  if (activeProperty === "humidity") {
+    chartData = data.tempArr;
+    unit = "%";
+  }
 
   return (
     <div className={styles.forecastContainer}>
@@ -36,6 +46,8 @@ function Forecast({ data }) {
         activeProperty={activeProperty}
         setActiveProperty={setActiveProperty}
       />
+      <br />
+      <span className={styles.unit}>{unit}</span>
       <ForecastChart data={chartData} dataKey={activeProperty} />
     </div>
   );

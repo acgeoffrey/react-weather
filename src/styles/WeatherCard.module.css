@@ -8,16 +8,11 @@
 
 .mainTemp {
   display: inline;
-  font-size: 3rem;
-}
-
-.mainTemp span {
-  vertical-align: super;
-  font-size: 1.5rem;
+  font-size: 5rem;
 }
 
 .cityWeather h4 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
 }
 
 .lastUpdated {

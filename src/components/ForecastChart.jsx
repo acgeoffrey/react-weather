@@ -7,7 +7,7 @@ function ForecastChart({ data, dataKey }) {
     <div className={styles.areaChartContainer}>
       <AreaChart
         width={900}
-        height={120}
+        height={150}
         data={data}
         margin={{ top: 20, right: 30, left: 20 }}
       >

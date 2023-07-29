@@ -14,6 +14,7 @@ function WeatherProvider({ children }) {
       weatherDetails,
       isLoading,
       addCityNav,
+      refresh,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
@@ -76,7 +77,16 @@ function WeatherProvider({ children }) {
 
       if (city.length > 2 || position.lat) {
         // console.log("fetch function initiated");
-        fetchWeather();
+
+        toast.promise(
+          fetchWeather(),
+          {
+            loading: "Refreshing...",
+            success: "Done",
+            error: "Error when refreshing",
+          },
+          { position: "bottom-center" }
+        );
       }
 
       //Cleanup function
@@ -85,6 +95,47 @@ function WeatherProvider({ children }) {
       };
     },
     [CITY_URL, POS_URL, city, position, CITY_FC_URL, POS_FC_URL, weatherDetails]
+  );
+
+  useEffect(
+    function () {
+      async function refreshFunction() {
+        const refreshCity = weatherDetails.filter(
+          (city) => currentCity === city.daily.id
+        );
+        if (refreshCity.length < 1) return;
+        const lat = refreshCity[0].daily.coord.lat;
+        const lon = refreshCity[0].daily.coord.lon;
+
+        const daily = await fetch(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${KEY}&units=metric`
+        );
+        const dailyData = await daily.json();
+
+        const weekly = await fetch(
+          `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${KEY}&units=metric`
+        );
+        const weeklyData = await weekly.json();
+        // toast.success("done", { position: "bottom-center" });
+        dispatch({
+          type: "refresh/done",
+          payload: { daily: dailyData, weekly: weeklyData },
+        });
+      }
+
+      if (refresh) {
+        toast.promise(
+          refreshFunction(),
+          {
+            loading: "Refreshing...",
+            success: "Done",
+            error: "Error when refreshing",
+          },
+          { position: "bottom-center" }
+        );
+      }
+    },
+    [refresh, KEY, weatherDetails, currentCity]
   );
 
   return (
@@ -98,6 +149,7 @@ function WeatherProvider({ children }) {
         weatherDetails,
         dispatch,
         addCityNav,
+        refresh,
       }}
     >
       {children}

@@ -21,11 +21,13 @@ const initialState = {
   status,
   addCityNav,
   isLoading,
+  refresh: false,
   error: "",
 };
 
 function reducer(state, action) {
   // console.log(action.type);
+  let filteredArray = [];
   switch (action.type) {
     case "addCity":
       return { ...state, addCityNav: false, city: action.payload };
@@ -41,7 +43,12 @@ function reducer(state, action) {
       return { ...state, position: action.payload };
     case "setCurrentCity":
       localStorage.setItem("currentCity", JSON.stringify(action.payload));
-      return { ...state, currentCity: action.payload, addCityNav: false };
+      return {
+        ...state,
+        currentCity: action.payload,
+        addCityNav: false,
+        refresh: true,
+      };
     case "addWeather":
       localStorage.setItem(
         "currentCity",
@@ -59,9 +66,27 @@ function reducer(state, action) {
         currentCity: action.payload.daily.id,
         status: "ready",
         addCityNav: false,
+        refresh: false,
         weatherDetails: [...state.weatherDetails, action.payload],
         lat: action.payload.daily.coord.lat,
         lon: action.payload.daily.coord.lon,
+      };
+    case "refresh/true":
+      return { ...state, refresh: true };
+    case "refresh/done":
+      for (let i = 0; i < state.weatherDetails.length; i++) {
+        if (state.currentCity === state.weatherDetails[i].daily.id) {
+          filteredArray.push(action.payload);
+        } else {
+          filteredArray.push(state.weatherDetails[i]);
+        }
+      }
+
+      localStorage.setItem("cities", JSON.stringify(filteredArray));
+      return {
+        ...state,
+        refresh: false,
+        weatherDetails: filteredArray,
       };
     case "error":
       return {
