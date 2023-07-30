@@ -51,7 +51,7 @@ body::-webkit-scrollbar {
 .btn-gps {
   background-color: #e23e57;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: var(--color-light);
 }
 
@@ -62,7 +62,7 @@ input {
   border: 1px solid #d3d3d3;
   font-family: inherit;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .btn-city-submit {

@@ -15,7 +15,7 @@ if (weatherDetails.length > 0) {
 
 const initialState = {
   city: "",
-  currentCity: currentCityLS ? currentCityLS : "",
+  currentCity: currentCityLS ? currentCityLS : 0,
   position: {},
   weatherDetails,
   status,
@@ -29,6 +29,7 @@ function reducer(state, action) {
   // console.log(action.type);
   let filteredArray = [];
   let filteredArrayAfterDelete = [];
+
   switch (action.type) {
     case "addCity":
       return { ...state, addCityNav: false, city: action.payload };
@@ -89,15 +90,40 @@ function reducer(state, action) {
         refresh: false,
         weatherDetails: filteredArray,
       };
+
     case "city/delete":
       filteredArrayAfterDelete = state.weatherDetails.filter(
         (city) => city.daily.id != action.payload
       );
-      localStorage.setItem("cities", JSON.stringify(filteredArrayAfterDelete));
-      return {
-        ...state,
-        weatherDetails: filteredArrayAfterDelete,
-      };
+
+      if (filteredArrayAfterDelete.length > 0) {
+        let tempCurrentCity = state.currentCity;
+        if (action.payload == tempCurrentCity) {
+          tempCurrentCity = filteredArrayAfterDelete[0].daily.id;
+        }
+        localStorage.setItem("currentCity", JSON.stringify(tempCurrentCity));
+        localStorage.setItem(
+          "cities",
+          JSON.stringify(filteredArrayAfterDelete)
+        );
+
+        return {
+          ...state,
+          weatherDetails: filteredArrayAfterDelete,
+          currentCity: tempCurrentCity,
+        };
+      } else {
+        localStorage.clear();
+        return {
+          ...state,
+          status: "cityNotLoaded",
+          addCityNav: false,
+          weatherDetails: [],
+          position: {},
+          currentCity: 0,
+        };
+      }
+
     case "error":
       return {
         ...state,

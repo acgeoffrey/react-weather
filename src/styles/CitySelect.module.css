@@ -9,7 +9,7 @@
 .gpsContainer {
   margin-top: 2rem;
   width: 90%;
-  height: 65%;
+  height: 70%;
   background-color: #eaeaea5a;
   display: flex;
   flex-direction: column;
@@ -17,16 +17,17 @@
   padding: 2rem;
   border: 1px solid #d3d3d3;
   border-radius: 2rem;
+  padding-bottom: 1rem;
 }
 
 .gpsContainer img {
   width: 80%;
-  height: 75%;
+  height: 70%;
 }
 
 .gpsContainer p {
   color: #e23e57;
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -35,9 +36,9 @@
   width: 25rem;
   text-align: center;
   margin-bottom: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .orPara {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
