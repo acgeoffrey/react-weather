@@ -8,11 +8,7 @@ function AddMoreCities() {
   // console.log("WEATHER", weatherDetails);
   const [city, setCity] = useState("");
 
-  const {
-    isLoading: isLoadingPosition,
-    position: geolocationPosition,
-    getPosition,
-  } = useGeolocation();
+  const { position: geolocationPosition, getPosition } = useGeolocation();
 
   useEffect(
     function () {
@@ -61,15 +57,23 @@ function AddMoreCities() {
       <div className={styles.savedLocationsContainer}>
         <h3>SAVED LOCATIONS</h3>
         {weatherDetails.map((city) => (
-          <div
-            key={city.daily.id}
-            className={styles.savedCity}
-            onClick={() =>
-              dispatch({ type: "setCurrentCity", payload: city.daily.id })
-            }
-          >
-            <h4>{city.daily.name}</h4>
-            <p>{city.daily.sys.country}</p>
+          <div key={city.daily.id} className={styles.savedCityContainer}>
+            <div
+              className={styles.savedCity}
+              onClick={() =>
+                dispatch({ type: "setCurrentCity", payload: city.daily.id })
+              }
+            >
+              <h4>{city.daily.name}</h4>
+              <p>{city.daily.sys.country}</p>
+            </div>
+            <div
+              onClick={() =>
+                dispatch({ type: "city/delete", payload: city.daily.id })
+              }
+            >
+              <i className="fa-solid fa-xmark"></i>
+            </div>
           </div>
         ))}
       </div>

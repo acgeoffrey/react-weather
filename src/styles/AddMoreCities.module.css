@@ -48,6 +48,18 @@
   border-bottom: 1px solid rgba(128, 128, 128, 0.433);
 }
 
+.savedCityContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.savedCityContainer i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 .savedCity {
   padding: 1rem;
   /* margin-bottom: 1rem; */

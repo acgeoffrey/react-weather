@@ -28,6 +28,7 @@ const initialState = {
 function reducer(state, action) {
   // console.log(action.type);
   let filteredArray = [];
+  let filteredArrayAfterDelete = [];
   switch (action.type) {
     case "addCity":
       return { ...state, addCityNav: false, city: action.payload };
@@ -87,6 +88,15 @@ function reducer(state, action) {
         ...state,
         refresh: false,
         weatherDetails: filteredArray,
+      };
+    case "city/delete":
+      filteredArrayAfterDelete = state.weatherDetails.filter(
+        (city) => city.daily.id != action.payload
+      );
+      localStorage.setItem("cities", JSON.stringify(filteredArrayAfterDelete));
+      return {
+        ...state,
+        weatherDetails: filteredArrayAfterDelete,
       };
     case "error":
       return {
