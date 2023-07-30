@@ -4,7 +4,8 @@
 
 ## Features
 
-- Mobile first design React weather application fetches weather data from OpenWeatherMap API.
+- Mobile first design Application.
+- This application fetches weather data from OpenWeatherMap API.
 - Displays daily weather and 3-day forecast for next 48 hours.
 - Add places by manually entering cities or automatically by GPS.
 - Weather Data is stored in LocalStorage.
@@ -13,7 +14,7 @@
 
 - Install the dependencies required by running npm install.
 - Start the server by running npm run dev.
-- Server should run on http://localhost:5173/
+- Server should run on [http://localhost:5173](http://localhost:5173/)
 
 ### Built with
 

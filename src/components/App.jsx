@@ -1,11 +1,11 @@
 import { useWeatherDetails } from "../WeatherContext";
 import Home from "../pages/Home";
-import Loader from "./Loader";
+// import Loader from "./Loader";
 import CitySelect from "../pages/CitySelect";
 import AddMoreCities from "./AddMoreCities";
 
 function App() {
-  const { status, isLoading, addCityNav } = useWeatherDetails();
+  const { status, addCityNav } = useWeatherDetails();
 
   // console.log("STATUS: ", status);
   // console.log("addCityNav: ", addCityNav);
