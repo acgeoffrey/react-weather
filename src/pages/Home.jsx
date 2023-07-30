@@ -76,6 +76,7 @@ function Home() {
           <Forecast data={chart} />
         </div>
       </div>
+      <p className={styles.poweredBySpan}>Powered by OpenWeatherMap</p>
     </div>
   );
 }

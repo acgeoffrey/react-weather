@@ -55,7 +55,9 @@ function WeatherCard() {
       <h2 className={styles.mainTemp}>{Math.ceil(main.temp)}&deg;</h2>
       <div className={styles.cityWeather}>
         <h4>{name}</h4>
-        <h4>{weather[0].main}</h4>
+        <h4>{`${weather[0].description
+          ?.charAt(0)
+          .toUpperCase()}${weather[0].description?.slice(1)}`}</h4>
         {/* <h4>{weather[0].description}</h4> */}
       </div>
       <p className={styles.lastUpdated}>
