@@ -22,12 +22,12 @@
 
 .gpsContainer img {
   width: 80%;
-  height: 70%;
+  height: 68%;
 }
 
 .gpsContainer p {
   color: #e23e57;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -36,9 +36,9 @@
   width: 25rem;
   text-align: center;
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .orPara {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }

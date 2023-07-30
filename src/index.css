@@ -42,32 +42,32 @@ body::-webkit-scrollbar {
 
 .btn {
   width: 25rem;
-  height: 3.5rem;
+  height: 4.5rem;
   border: none;
-  border-radius: 2rem;
+  border-radius: 3rem;
   font-family: inherit;
 }
 
 .btn-gps {
   background-color: #e23e57;
   font-weight: 500;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   color: var(--color-light);
 }
 
 input {
   width: 25rem;
-  height: 3.5rem;
-  border-radius: 2rem;
+  height: 4.5rem;
+  border-radius: 3rem;
   border: 1px solid #d3d3d3;
   font-family: inherit;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 
 .btn-city-submit {
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
   border-radius: 50%;
   background-color: var(--color-accent);
   color: white;
