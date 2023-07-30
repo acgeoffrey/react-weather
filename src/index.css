@@ -1,8 +1,13 @@
 :root {
   --color-darkest: #343a40;
-  --color-dark: #495057;
+  --color-dark: grey;
   --color-medium: #ced4da;
   --color-light: #f1f3f5;
+
+  --color-trans: #eaeaea5a;
+
+  --color-bg: white;
+  --color: black;
 
   --color-accent: #e23e57;
 
@@ -31,7 +36,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   color: var(--color-darkest);
-  background-color: white;
+  background-color: var(--color-bg-light);
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
@@ -49,7 +54,7 @@ body::-webkit-scrollbar {
 }
 
 .btn-gps {
-  background-color: #e23e57;
+  background-color: var(--color-accent);
   font-weight: 500;
   font-size: 1.8rem;
   color: var(--color-light);
@@ -70,7 +75,7 @@ input {
   width: 4.5rem;
   border-radius: 50%;
   background-color: var(--color-accent);
-  color: white;
+  color: var(--color-light);
   border: none;
   margin-left: 1rem;
 }
@@ -79,6 +84,19 @@ input {
   font-size: 1.6rem;
   font-weight: 600;
 }
+
+/* Dark Mode */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color: white;
+    --color-bg: black;
+  }
+
+  body {
+    color: var(--color);
+    background-color: var(--color-bg);
+  }
+} */
 
 /* Loader */
 .loader-container {

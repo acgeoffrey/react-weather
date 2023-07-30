@@ -5,8 +5,8 @@
 
   display: inline-block;
 
-  border: 1px solid grey;
-  color: grey;
+  border: 1px solid var(--color-dark);
+  color: var(--color-dark);
   border-radius: 50%;
 
   font-size: 1.55rem;
@@ -27,8 +27,9 @@
 .active {
   border-radius: 2rem;
   width: inherit;
-  background-color: #e23e575c;
+  background-color: #e23e5730;
   color: #e23e57;
   border-color: #e23e57;
-  transition: color 0.7s ease-in-out;
+  transform: translateX(2%);
+  transition: transform 0.7s ease-in-out;
 }

@@ -77,6 +77,8 @@
 
 .formContainer {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 95%;
 
   margin-left: 50%;
@@ -84,7 +86,7 @@
 }
 
 .formContainer input {
-  width: 90%;
+  width: 82.5%;
   text-align: left;
   padding-left: 2rem;
 }

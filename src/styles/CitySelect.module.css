@@ -10,7 +10,7 @@
   margin-top: 2rem;
   width: 90%;
   height: 70%;
-  background-color: #eaeaea5a;
+  background-color: var(--color-trans);
   display: flex;
   flex-direction: column;
   align-items: center;
