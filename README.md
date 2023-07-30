@@ -16,11 +16,9 @@
   <tr>
     <td> <img src="./public/images/screenshots/ss1.jpg"  alt="1" width = 360px height = 640px ></td>
     <td> <img src="./public/images/screenshots/ss2.jpg"  alt="1" width = 360px height = 640px ></td>
-    <td> <img src="./public/images/screenshots/ss3.jpg"  alt="1" width = 360px height = 640px ></td>
-
-   </tr> 
-   <!-- <tr>
-   <td> <img src="./public/images/screenshots/ss3.jpg"  alt="1" width = 360px height = 640px ></td></tr>    -->
+   </tr>
+   <tr>
+   <td> <img src="./public/images/screenshots/ss3.jpg"  alt="1" width = 360px height = 640px ></td></tr>
 </table>
 
 ### Run
