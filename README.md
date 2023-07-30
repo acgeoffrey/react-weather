@@ -10,6 +10,19 @@
 - Add places by manually entering cities or automatically by GPS.
 - Weather Data is stored in LocalStorage.
 
+## Screenshots
+
+<table>
+  <tr>
+    <td> <img src="./public/images/screenshots/ss1.jpg"  alt="1" width = 360px height = 640px ></td>
+    <td> <img src="./public/images/screenshots/ss2.jpg"  alt="1" width = 360px height = 640px ></td>
+    <td> <img src="./public/images/screenshots/ss3.jpg"  alt="1" width = 360px height = 640px ></td>
+
+   </tr> 
+   <!-- <tr>
+   <td> <img src="./public/images/screenshots/ss3.jpg"  alt="1" width = 360px height = 640px ></td></tr>    -->
+</table>
+
 ### Run
 
 - Install the dependencies required by running npm install.
