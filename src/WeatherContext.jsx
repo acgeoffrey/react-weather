@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useReducer,
+} from "react";
 import { initialState, reducer } from "./reducer";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -123,7 +129,7 @@ function WeatherProvider({ children }) {
         });
       }
 
-      console.log(refresh);
+      // console.log(refresh);
       if (refresh) {
         toast.promise(
           refreshFunction(),
@@ -139,20 +145,31 @@ function WeatherProvider({ children }) {
     [refresh, KEY, weatherDetails, currentCity]
   );
 
+  const value = useMemo(() => {
+    return {
+      city,
+      currentCity,
+      position,
+      status,
+      isLoading,
+      weatherDetails,
+      dispatch,
+      addCityNav,
+      refresh,
+    };
+  }, [
+    addCityNav,
+    city,
+    currentCity,
+    isLoading,
+    position,
+    refresh,
+    status,
+    weatherDetails,
+  ]);
+
   return (
-    <WeatherContext.Provider
-      value={{
-        city,
-        currentCity,
-        position,
-        status,
-        isLoading,
-        weatherDetails,
-        dispatch,
-        addCityNav,
-        refresh,
-      }}
-    >
+    <WeatherContext.Provider value={value}>
       {children}
       <Toaster
         toastOptions={{
