@@ -30,6 +30,20 @@
   background-color: #e23e5730;
   color: #e23e57;
   border-color: #e23e57;
-  transform: translateX(2%);
-  transition: transform 0.7s ease-in-out;
+  /* transform: translateX(2%); */
+  /* transition: all 0.7s ease-in-out; */
+  position: relative;
+}
+
+@keyframes slideFromLeft {
+  from {
+    right: -2%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.active {
+  animation: slideFromLeft 1s ease forwards;
 }

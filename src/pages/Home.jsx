@@ -46,33 +46,35 @@ function Home() {
     <div className={styles.homeContainer}>
       <WeatherCard />
       <div className={styles.detailsContainer}>
-        <h2>Details</h2>
-        <div className={styles.detailsCompContainer}>
-          <DetailComponent
-            icon={<i className="fa-solid fa-water"></i>}
-            data1={main.feels_like}
-            unit={"°"}
-            description="Feels like"
-          />
-          <DetailComponent
-            icon={<i className="fa-solid fa-temperature-three-quarters"></i>}
-            data1={main.temp_max}
-            data2={main.temp_min}
-            unit={"°"}
-            description="Max | Min"
-          />
-          <DetailComponent
-            icon={<i className="fa-solid fa-gauge"></i>}
-            data1={main.pressure}
-            unit={"hPa"}
-            description="Pressure"
-          />
-          <DetailComponent
-            icon={<i className="fa-solid fa-wind"></i>}
-            data1={wind.speed}
-            unit={"km/h"}
-            description="Wind Speed"
-          />
+        <div className={styles.detailsFirstDiv}>
+          <h2>Details</h2>
+          <div className={styles.detailsCompContainer}>
+            <DetailComponent
+              icon={<i className="fa-solid fa-water"></i>}
+              data1={main.feels_like}
+              unit={"°"}
+              description="Feels like"
+            />
+            <DetailComponent
+              icon={<i className="fa-solid fa-temperature-three-quarters"></i>}
+              data1={main.temp_max}
+              data2={main.temp_min}
+              unit={"°"}
+              description="Max | Min"
+            />
+            <DetailComponent
+              icon={<i className="fa-solid fa-gauge"></i>}
+              data1={main.pressure}
+              unit={"hPa"}
+              description="Pressure"
+            />
+            <DetailComponent
+              icon={<i className="fa-solid fa-wind"></i>}
+              data1={wind.speed}
+              unit={"km/h"}
+              description="Wind Speed"
+            />
+          </div>
           <Forecast data={chart} />
         </div>
       </div>

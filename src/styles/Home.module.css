@@ -3,9 +3,16 @@
 }
 
 .detailsContainer {
+  width: 100%;
   padding: 2rem 1rem;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
+}
+
+.detailsFirstDiv {
+  width: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 .detailsContainer h2 {
